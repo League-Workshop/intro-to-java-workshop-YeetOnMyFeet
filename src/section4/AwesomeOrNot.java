@@ -2,8 +2,28 @@ package section4;
 
 import java.util.Random;
 
-public class AwesomeOrNot {
+import javax.swing.JOptionPane;
 
+public class AwesomeOrNot {
+public static void main(String[] args) {
+	
+
+	Random randGen = new Random();
+	int x = randGen.nextInt(4);
+	System.out.println(x);
+	JOptionPane.showInputDialog("What do you think is awesome?");
+	if(x == 0) {
+	JOptionPane.showMessageDialog(null, "What you entered is awesome!");
+	}
+	if(x == 1) {
+		JOptionPane.showMessageDialog(null, "Whatever you entered is ok");
+	}
+	if(x == 2) {
+		JOptionPane.showMessageDialog(null, "Whatever you entered is boring");
+	}
+	if(x == 3) {
+		JOptionPane.showMessageDialog(null, "You're a bot!!!");
+	}
 	// 1. Make a main method that includes all the steps below…
 
 	// 2. Make a variable that will hold a random number and put a random number into this variable using "new Random().nextInt(4)"
@@ -27,7 +47,7 @@ public class AwesomeOrNot {
 	// 8. If the random number is 3
 
 	// -- write your own answer
-
+}
 }
 
 
