@@ -16,30 +16,53 @@ import org.jointheleague.graphical.robot.Robot;
 public class RobotTreasureHunt implements KeyEventDispatcher{
 
 	// 1. Create a new mini robot (type "mini" inside the parentheses)
-	
+	Robot mini = new Robot("mini");
 	private void goUp() throws InterruptedException {
+		mini.setAngle(0);
+		mini.microMove(10);
+		
 		// 2. Make the robot move up the screen (use setAngle(angle) and microMove(distance))
 		
 	}
 
 	private void goDown() throws InterruptedException{
 		// 3. make the robot move down the screen (use setAngle(angle) and microMove(distance))
-		
+		mini.setAngle(180);
+		mini.microMove(10);
 	}
 
 	private void turnLeft() throws InterruptedException{
 		// 4. Make the robot turn to the left (use setAngle(angle) and microMove(distance))
-
+mini.setAngle(270);
+mini.microMove(10);
 	}
 
 	private void turnRight() throws InterruptedException{
 		// 5. make the robot turn to the right (use setAngle(angle) and microMove(distance))
-		
+		mini.setAngle(90);
+		mini.microMove(10);
 	}
 
 	private void spaceBarWasPressed() {
+int robotXLocation = mini.getX();
+int robotYLocation = mini.getY();
 
-		// 5. Change ROBOTNAME below to match the name of the robot you created in step 1.  THEN, remove the slashes at the beginning of the next two lines
+System.out.println(robotXLocation);
+System.out.println(robotYLocation);
+
+if (robotXLocation == 730 && robotYLocation ==  410) {
+	JOptionPane.showMessageDialog(null, "Go up to the cannon!");
+	
+}
+
+if (robotXLocation == 710 && robotYLocation == 250) {
+	JOptionPane.showMessageDialog(null, "Your are so close to the tresure! \nGo to the area where piranhas hide and rocks lay.");
+}
+
+if (robotXLocation == 470 && robotYLocation == 550) {
+	treasureFound();
+}
+// 5. Change ROBOTNAME below to match the name of the robot you created in step 1.  THEN, remove the slashes at the beginning of the next two lines
 		//int robotXLocation = ROBOTNAME.getX();
 		//int robotYLocation = ROBOTNAME.getY();
 		
